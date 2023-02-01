@@ -1,0 +1,12 @@
+{% extends 'face_login/base.html' %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form.as_p}}
+        </table>
+
+        <input type="submit" value="createuser">
+    </from>
+{% endblock content %}

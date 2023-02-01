@@ -1,0 +1,32 @@
+{% extends 'face_login/base.html' %}
+{% load static %}
+
+<!-- <!doctype html>
+{% load static %}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>index</title>
+  </head>
+
+  <body>
+    <h1>index.html</h1>
+    <p>{{ welcome }}</p>
+
+  </body>
+</html> -->
+
+
+{% block content %}
+    <h1>index.html</h1>
+
+
+    <ul>
+        {% for timedata in login_data %}
+            <li>
+                person: {{timedata.user}}, time: {{ timedata.time}},  {{timedata.status }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock content %}

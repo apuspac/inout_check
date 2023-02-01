@@ -1,0 +1,8 @@
+*.png
+*.jpg
+*.hdf5
+*.npy
+
+
+.vscode
+Pipfile

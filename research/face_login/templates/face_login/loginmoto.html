@@ -1,0 +1,20 @@
+<!doctype html>
+{% load static %}
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>アプリ</title>
+  </head>
+
+  <body>
+    <h1>login.html</h1>
+
+    <p>{{ result_id }}</p>
+    <p>{{ result }}</p>
+    <form action = "{% url 'face_login:login' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type = "submit" name = "authc_button" value ="認証!" class = "formbutton">
+    </form>
+  </body>
+</html>

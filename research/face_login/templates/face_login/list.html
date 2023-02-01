@@ -1,0 +1,18 @@
+{% extends 'face_login/base.html' %}
+
+<!--
+{% block header %}
+    <h1>user<h1>
+{% endblock header %} -->
+
+{% block content %}
+    <h1>Person List</h1>
+
+    <ul>
+        {% for person in member_list %}
+            <li><a href=" {% url 'face_login:update' person.id %}">
+                user id: {{ person.user_id}}, 名前: {{ person.user_name }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}

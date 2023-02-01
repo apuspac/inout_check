@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+
+<html lang = "ja">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %} SITE {% endblock　%}</title>
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+
+    <header class="header-5">
+        <div class="header-inner">
+          <div class="logo">
+            <img src="" />
+          </div>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <a href="{% url 'face_login:top' %}"><li class="header-nav-item select">Log</li></a>
+              <a href="{% url 'face_login:list' %}"><li class="header-nav-item">List</li></a>
+              <a href="{% url 'face_login:login' %}"><li class="header-nav-item">Login</li></a>
+              <a href="{% url 'face_login:create'%}"><li class="header-nav-item">New User</li></a>
+            </ul>
+            <div class="header-ham">
+              <div class="menu2"></div>
+              <div class="menu2"></div>
+              <div class="menu2"></div>
+            </div>
+          </nav>
+        </div>
+    </header>
+
+    <body>
+        <!-- <div class ="header">
+            <a href="{% url 'face_login:top' %}">top</a>
+            <a href="{% url 'face_login:list' %}">list表示</a>
+            <a href="{% url 'face_login:login' %}">login</a>
+            <a href="{% url 'face_login:create'%}">user作成</a>
+            {% block header %}
+            {% endblock header %}
+        </div> -->
+
+        <div class="main">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

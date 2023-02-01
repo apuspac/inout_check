@@ -1,0 +1,18 @@
+{% extends 'face_login/base.html' %}
+
+{% block content %}
+    <h1<> Page</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <ul>
+            {% for person in member_list %}
+                <input type="submit" value="{{ person.user_name }}" name ="LOGIN">
+
+            {% endfor %}
+        </ul>
+
+        <input type="submit" name = "LOGIN">
+    </form>
+
+{% endblock content %}
