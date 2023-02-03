@@ -11,4 +11,6 @@ RaspberryPiを使用。同じネットワークに接続することで，webか
 データベースはpostgreSQLを使用。
 - UI:  
 DjangoからWebから操作可能にし、簡単なUIを実装した。login画面になるとカメラが起動し、顔認証ができればログインとする流れになっている。
+
+
 ![UI](doc/UI_ss.png)
